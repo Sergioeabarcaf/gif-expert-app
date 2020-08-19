@@ -8,7 +8,6 @@ interface GifGridItemProps {
 
 export const GifGridItem = ({ dataImage }: GifGridItemProps) => {
     const { url, title } = dataImage;
-    console.log(dataImage);
     return (
         <div className='card animate__animated animate__fadeInUp'>
             <img src={ url } alt={ title } />
