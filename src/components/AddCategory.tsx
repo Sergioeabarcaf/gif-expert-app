@@ -14,7 +14,7 @@ export const AddCategory = (props: AddCategoryProps) => {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        inputValue.trim().length > 1 && props.setCategories( (categories: string[]) =>  [...categories, inputValue])
+        inputValue.trim().length > 1 && props.setCategories( (categories: string[]) =>  [inputValue, ...categories])
     }
 
     return (

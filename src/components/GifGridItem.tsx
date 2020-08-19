@@ -6,12 +6,13 @@ interface GifGridItemProps {
 }
 
 
-export const GifGridItem = (props: GifGridItemProps) => {
-    console.log(props);
+export const GifGridItem = ({ dataImage }: GifGridItemProps) => {
+    const { url, title } = dataImage;
+    console.log(dataImage);
     return (
-        <div>
-            <img src={ props.dataImage.url } alt={props.dataImage.title} />
-            <p>{ props.dataImage.title }</p>
+        <div className='card'>
+            <img src={ url } alt={ title } />
+            <p>{ title }</p>
         </div>
     )
 }
