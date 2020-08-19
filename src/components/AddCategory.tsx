@@ -1,4 +1,4 @@
-import React, { useState, MouseEvent, Dispatch, SetStateAction } from 'react'
+import React, { useState } from 'react'
 
 interface AddCategoryProps {
     setCategories: Function
