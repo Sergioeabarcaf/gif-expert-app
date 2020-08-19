@@ -1,4 +1,3 @@
-import React from 'react'
 import { GifsData } from '../components/GifGrid';
 
 interface GifsResponse {
@@ -28,12 +27,4 @@ export const getGifs = async( category: string ) => {
     });
 
     return gifs;
-
-
-
-    return (
-        <div>
-            
-        </div>
-    )
 }
