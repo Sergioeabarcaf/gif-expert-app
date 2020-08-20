@@ -1,5 +1,6 @@
 import React from 'react'
 import { GifsData } from './GifGrid'
+import PropTypes from 'prop-types';
 
 interface GifGridItemProps {
   dataImage: GifsData
@@ -14,4 +15,8 @@ export const GifGridItem = ({ dataImage }: GifGridItemProps) => {
       <p>{title}</p>
     </div>
   )
+}
+
+GifGridItem.proptotypes = {
+  dataImage: PropTypes.object.isRequired
 }
