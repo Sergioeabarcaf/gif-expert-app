@@ -1,29 +1,29 @@
 import React, { useState } from 'react'
 
 interface AddCategoryProps {
-    setCategories: Function
+  setCategories: Function
 }
 
 export const AddCategory = (props: AddCategoryProps) => {
 
-    const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState('');
 
-    const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setInputValue(e.target.value);
-    }
+  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(e.target.value);
+  }
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        inputValue.trim().length > 1 && props.setCategories( (categories: string[]) =>  [inputValue, ...categories])
-    }
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    inputValue.trim().length > 1 && props.setCategories((categories: string[]) => [inputValue, ...categories])
+  }
 
-    return (
-        <form onSubmit={ handleSubmit }>
-            <input
-            type='text'
-            value={ inputValue }
-            onChange={ handleInput }
-            />
-        </form>
-    )
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type='text'
+        value={inputValue}
+        onChange={handleInput}
+      />
+    </form>
+  )
 }

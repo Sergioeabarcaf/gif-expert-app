@@ -3,10 +3,10 @@ import GifExpertApp from '../GifExpertApp';
 import { shallow } from 'enzyme';
 
 describe(' pruebas sobre GifExpertApp', () => {
-    let wrapper = shallow(<GifExpertApp />);
+  let wrapper = shallow(<GifExpertApp />);
 
-    test('Debería renderizar la aplicación', () => {
-        expect( wrapper ).toMatchSnapshot();
-    });
+  test('Debería renderizar la aplicación', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 
 });
