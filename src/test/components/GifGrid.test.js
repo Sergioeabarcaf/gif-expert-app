@@ -17,11 +17,14 @@ describe('Pruebas sobre el componente < GifGrid />', () => {
   });
 
   test('Debería de mostrar items cuando se cargan imagenes con useFetchGifs', () => {
+
     useFetchGifs.mockReturnValue({ data: dataArray, loading: false });
 
     const wrapper = shallow(< GifGrid category={ category } />);
 
-    expect( wrapper ).toMatchSnapshot();
+    // expect( wrapper ).toMatchSnapshot();
+    expect( wrapper.find('p').exists() ).toBe( false );
+    expect( wrapper.find('GifGridItem').length ).toBe( dataArray.length );
   });
   
 });
