@@ -17,6 +17,6 @@ export const GifGridItem = ({ dataImage }: GifGridItemProps) => {
   )
 }
 
-GifGridItem.proptotypes = {
+GifGridItem.propTypes = {
   dataImage: PropTypes.object.isRequired
 }
