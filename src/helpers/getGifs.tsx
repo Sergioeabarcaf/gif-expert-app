@@ -10,11 +10,11 @@ interface GifsResponse {
   }
 }
 
-export const getGifs = async (category: string) => {
+export const getGifs = async(category: string) => {
 
   const limit = process.env.REACT_APP_LIMIT;
   const apiKey = process.env.REACT_APP_GIPHY_API_KEY;
-  const url = `https://api.giphy.com/v1/gifs/search?api_key=${ apiKey }=${encodeURI(category)}&limit=${limit}`;
+  const url = `https://api.giphy.com/v1/gifs/search?api_key=${ apiKey }&q=${encodeURI(category)}&limit=${limit}`;
   const resp = await fetch(url);
   const { data } = await resp.json();
 
